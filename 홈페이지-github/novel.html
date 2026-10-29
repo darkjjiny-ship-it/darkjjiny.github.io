@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>소설 쓰기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">나의 창작 공방</a>
+    <a href="emoji.html">이모티콘</a>
+    <a class="active" href="novel.html">소설</a>
+    <a href="compose.html">작곡</a>
+    <a href="gallery.html">이미지</a>
+  </nav>
+
+  <main class="page">
+    <div class="page-banner banner-novel">
+      <h1 class="page-title">소설 쓰기</h1>
+    </div>
+    <p class="hint">글은 이 브라우저에 자동 저장돼요. 다른 기기에서 보려면 TXT로 내보내세요.</p>
+
+    <section class="panel reading">
+      <h2>📚 내가 읽은 책</h2>
+      <ul class="book-list">
+        <li>
+          <img src="images/book-debut.jpg" alt="조명이 비추는 무대 위 마이크">
+          <div>
+            <strong>데뷔 못 하면 죽는 병 걸림</strong> <span class="badge">읽음</span>
+            <small class="credit">사진: <a href="https://pixabay.com/photos/concert-microphone-event-light-4198983/" target="_blank" rel="noopener">MediaPromo / Pixabay</a></small>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="writer">
+      <aside class="panel">
+        <label class="field">
+          작품
+          <select id="novel-select"></select>
+        </label>
+        <div class="btn-row">
+          <button id="new-novel" class="btn">+ 새 작품</button>
+          <button id="delete-novel" class="btn danger">작품 삭제</button>
+        </div>
+
+        <div>
+          <h2>목차</h2>
+          <ol id="chapter-list" class="chapter-list"></ol>
+        </div>
+        <div class="btn-row">
+          <button id="add-chapter" class="btn">+ 장 추가</button>
+          <button id="delete-chapter" class="btn danger">장 삭제</button>
+        </div>
+
+        <button id="export" class="btn primary">TXT로 내보내기</button>
+      </aside>
+
+      <section class="editor">
+        <input id="novel-title" class="title-input" placeholder="작품 제목">
+        <input id="chapter-title" class="chapter-input" placeholder="장 제목">
+        <textarea id="body" placeholder="이야기를 시작해 보세요..."></textarea>
+        <div class="editor-foot">
+          <span id="count"></span>
+          <span id="saved"></span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    사진: <a href="https://pixabay.com/photos/open-book-library-education-read-1428428/" target="_blank" rel="noopener">lil_foot_ / Pixabay</a>
+  </footer>
+
+  <script src="novel.js"></script>
+</body>
+</html>

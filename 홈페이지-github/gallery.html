@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이미지 갤러리</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">나의 창작 공방</a>
+    <a href="emoji.html">이모티콘</a>
+    <a href="novel.html">소설</a>
+    <a href="compose.html">작곡</a>
+    <a class="active" href="gallery.html">이미지</a>
+  </nav>
+
+  <header class="hero">
+    <h1>이미지 갤러리</h1>
+    <p>무료 이미지를 검색해 보세요</p>
+    <form id="search-form" class="search">
+      <input id="query" type="search" placeholder="예: 바다, 고양이, 가을" autocomplete="off" required>
+      <button type="submit">검색</button>
+    </form>
+  </header>
+
+  <main class="page">
+    <p id="status" class="status"></p>
+    <div id="gallery" class="gallery"></div>
+    <button id="more" class="more" hidden>더 보기</button>
+  </main>
+
+  <footer>
+    이미지 제공: <a href="https://pixabay.com/" target="_blank" rel="noopener">Pixabay</a>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>

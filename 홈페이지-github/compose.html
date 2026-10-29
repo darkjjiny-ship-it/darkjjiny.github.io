@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작곡하기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">나의 창작 공방</a>
+    <a href="emoji.html">이모티콘</a>
+    <a href="novel.html">소설</a>
+    <a class="active" href="compose.html">작곡</a>
+    <a href="gallery.html">이미지</a>
+  </nav>
+
+  <main class="page">
+    <div class="page-banner banner-compose">
+      <h1 class="page-title">작곡하기</h1>
+    </div>
+    <p class="hint">칸을 눌러 음을 넣고 ▶ 재생을 누르세요. 마우스로는 끌어서 여러 칸을 한 번에 칠할 수 있어요. 스페이스바로 재생/정지.</p>
+
+    <div class="controls">
+      <button id="play" class="btn primary">▶ 재생</button>
+      <label>빠르기 <input type="range" id="bpm" min="60" max="180"> <span id="bpm-label"></span></label>
+      <label>소리
+        <select id="wave">
+          <option value="triangle">부드러운</option>
+          <option value="sine">맑은</option>
+          <option value="square">게임기</option>
+          <option value="sawtooth">날카로운</option>
+        </select>
+      </label>
+      <label>길이
+        <select id="steps">
+          <option value="16">1마디</option>
+          <option value="32">2마디</option>
+          <option value="64">4마디</option>
+        </select>
+      </label>
+      <button id="example" class="btn">예시 불러오기</button>
+      <button id="clear" class="btn danger">지우기</button>
+      <button id="export" class="btn">WAV로 저장</button>
+    </div>
+
+    <div class="seq-wrap">
+      <div id="seq" class="seq"></div>
+    </div>
+  </main>
+
+  <footer>
+    사진: <a href="https://pixabay.com/photos/piano-instrument-music-piano-keys-3505109/" target="_blank" rel="noopener">MabelAmber / Pixabay</a>
+  </footer>
+
+  <script src="compose.js"></script>
+</body>
+</html>

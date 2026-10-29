@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이모티콘 그리기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="index.html">나의 창작 공방</a>
+    <a class="active" href="emoji.html">이모티콘</a>
+    <a href="novel.html">소설</a>
+    <a href="compose.html">작곡</a>
+    <a href="gallery.html">이미지</a>
+  </nav>
+
+  <main class="page">
+    <div class="page-banner banner-emoji">
+      <h1 class="page-title">이모티콘 그리기</h1>
+    </div>
+    <p class="hint">그린 그림은 이 브라우저에 자동 저장돼요. 되돌리기: Ctrl+Z / 다시: Ctrl+Y</p>
+
+    <div class="studio">
+      <div class="canvas-wrap">
+        <canvas id="canvas" width="512" height="512"></canvas>
+      </div>
+
+      <aside class="panel">
+        <div>
+          <h2>도구</h2>
+          <div id="tools" class="seg">
+            <button class="btn active" data-tool="pen">✏️ 펜</button>
+            <button class="btn" data-tool="eraser">🧽 지우개</button>
+            <button class="btn" data-tool="fill">🪣 채우기</button>
+          </div>
+        </div>
+
+        <div>
+          <h2>색</h2>
+          <div id="palette" class="palette"></div>
+          <label class="row">직접 고르기 <input type="color" id="color" value="#222222"></label>
+        </div>
+
+        <div>
+          <h2>굵기: <span id="size-label">12</span></h2>
+          <input type="range" id="size" min="2" max="60" value="12">
+        </div>
+
+        <div class="btn-row">
+          <button id="undo" class="btn">↶ 되돌리기</button>
+          <button id="redo" class="btn">↷ 다시</button>
+          <button id="clear" class="btn danger">새로 그리기</button>
+        </div>
+
+        <div>
+          <label class="row" style="margin-bottom: 8px;">
+            <input type="checkbox" id="transparent" checked> 배경 투명하게 저장
+          </label>
+          <button id="save" class="btn primary">PNG로 저장</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    사진: <a href="https://pixabay.com/photos/colorful-pencils-submerged-2137080/" target="_blank" rel="noopener">Myriams-Fotos / Pixabay</a>
+  </footer>
+
+  <script src="emoji.js"></script>
+</body>
+</html>
